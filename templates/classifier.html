@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Machine Learning Classifier - Iris Dataset</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+
+
+<body>
+  <h1>Machine Learning Classifier</h1>
+  <h2>Iris Classifier</h2>
+  <form method="POST" action="/predict">
+    <label for="sepal_length">Sepal Length:</label>
+    <input type="text" id="sepal_length" name="sepal_length" required>
+    <br>
+    <label for="sepal_width">Sepal Width:</label>
+    <input type="text" id="sepal_width" name="sepal_width" required>
+    <br>
+    <label for="petal_length">Petal Length:</label>
+    <input type="text" id="petal_length" name="petal_length" required>
+    <br>
+    <label for="petal_width">Petal Width:</label>
+    <input type="text" id="petal_width" name="petal_width" required>
+    <br>
+    <input type="submit" value="Predict">
+  </form>
+
+
+
+
+
+
+
+
+
+
+    <!-- Add the copyright notice -->
+    <footer>
+      <p>&copy; <span id="year"></span> César Sinchiguano. All rights reserved.</p>
+    </footer>
+  
+    <!-- Add a script to dynamically set the year -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

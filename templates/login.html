@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Machine Learning Classifier - Iris Dataset</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+
+
+
+
+<body>
+  <h1>Machine Learning Classifier </h1>
+  <h2> Iris Dataset</h2>
+  <h3>Ing. Sinchiguano César, MSc</h3>
+  <h4>ULEAM</h4>
+  <h4> El Carmen-Manabí</h4>
+
+
+  <form method="post" action="/login">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Login">
+
+    {% if error_message %}
+    <div class="error-message">
+      {{ error_message }}
+    </div>
+    {% endif %}
+  </form>
+
+
+
+  <!-- Rest of the HTML content -->
+
+
+
+  <!-- Add links to social networks -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/cesar.sinchiguano" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visit Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UC8gI5RtjUtey-Hs1j3O7jIg" target="_blank" rel="noopener noreferrer" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visit YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <!-- Add more social network links as needed -->
+  </div>
+
+
+
+
+
+
+  <!-- Add the copyright notice -->
+  <footer>
+    <p>&copy; <span id="year"></span> César Sinchiguano. All rights reserved.</p>
+  </footer>
+
+  <!-- Add a script to dynamically set the year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

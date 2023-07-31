@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, Name!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            justify-content: center;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 14px;
+        }
+
+        .greeting {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, Flask and Bootstrap!</h1>
+        <form method="POST">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                </div>
+            </div>
+        </form>
+        {% if name %}
+            <div class="greeting">Hello, {{ name }}!</div>
+        {% endif %}
+    </div>
+</body>
+</html>

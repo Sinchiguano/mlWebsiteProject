@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iris Classifier - Result</title>
+</head>
+<body>
+  <h1>Iris Classifier - Result</h1>
+  {% if prediction %}
+  <h2>Prediction: {{ target_names[prediction] }}</h2>
+  {% endif %}
+
+
+  <a href="{{ url_for('predict') }}">Go back</a>
+</body>
+</html>
